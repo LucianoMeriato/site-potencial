@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import { trails } from "@/data/trails";
+import { site } from "@/data/site";
 
 const icons = {
   graduationCap: GraduationCap,
@@ -49,10 +50,14 @@ export default function StudyTrails() {
         <div className="mt-8 sm:mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
           {trails.map((t, i) => {
             const Icon = icons[t.iconKey];
+            const whatsappUrl = `${site.whatsapp.href}?text=${encodeURIComponent(t.whatsappMessage)}`;
             return (
               <motion.a
                 key={t.id}
-                href={t.href}
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Falar no WhatsApp sobre ${t.title}`}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
