@@ -9,7 +9,8 @@ export type Trail = {
     | "bookOpen"
     | "trendingUp"
     | "users";
-  href: string;
+  /** Mensagem que será pré-preenchida no WhatsApp ao clicar em "Saber mais" */
+  whatsappMessage: string;
 };
 
 export const trails: Trail[] = [
@@ -18,21 +19,24 @@ export const trails: Trail[] = [
     title: "ENEM",
     description: "Preparação completa e estratégica para o ENEM.",
     iconKey: "graduationCap",
-    href: "#enem",
+    whatsappMessage:
+      "Olá, +Potencial! Vim pelo site e quero saber mais sobre a preparação para o ENEM.",
   },
   {
     id: "vestibulares",
     title: "Vestibulares",
-    description: "UFMG, UFV, CEFET, Medicina e outras.",
+    description: "UFLA, UFMG, UFV, CEFET, Medicina e outras.",
     iconKey: "scrollText",
-    href: "#vestibulares",
+    whatsappMessage:
+      "Olá, +Potencial! Vim pelo site e quero saber mais sobre a preparação para vestibulares (UFLA, UFMG, UFV, CEFET, Medicina, etc.).",
   },
   {
     id: "redacao",
     title: "Redação",
     description: "Da ideia à nota máxima: com método, treino e feedback real.",
     iconKey: "penLine",
-    href: "#redacao",
+    whatsappMessage:
+      "Olá, +Potencial! Vim pelo site e quero saber mais sobre as aulas de Redação.",
   },
   {
     id: "ensino-medio",
@@ -40,7 +44,8 @@ export const trails: Trail[] = [
     description:
       "Conteúdos fortes para brilhar e construir o futuro com confiança.",
     iconKey: "bookOpen",
-    href: "#ensino-medio",
+    whatsappMessage:
+      "Olá, +Potencial! Vim pelo site e quero saber mais sobre o acompanhamento para o Ensino Médio.",
   },
   {
     id: "fundamental",
@@ -48,7 +53,8 @@ export const trails: Trail[] = [
     description:
       "Bases sólidas desde cedo para chegar com força no futuro.",
     iconKey: "trendingUp",
-    href: "#fundamental",
+    whatsappMessage:
+      "Olá, +Potencial! Vim pelo site e quero saber mais sobre o reforço para o Ensino Fundamental.",
   },
   {
     id: "acompanhamento",
@@ -56,6 +62,7 @@ export const trails: Trail[] = [
     description:
       "Rotina, metas, disciplina e equilíbrio entre estudos e vida.",
     iconKey: "users",
-    href: "#acompanhamento",
+    whatsappMessage:
+      "Olá, +Potencial! Vim pelo site e quero saber mais sobre o acompanhamento e a rotina de estudos.",
   },
 ];
