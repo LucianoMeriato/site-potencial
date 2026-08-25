@@ -9,4 +9,4 @@ npm install
 npm run dev
 ```
 
-A aplicação fica disponível em http://localhost:3000.
+
